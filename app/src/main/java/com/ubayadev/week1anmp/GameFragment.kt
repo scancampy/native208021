@@ -24,7 +24,8 @@ class GameFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val name = GameFragmentArgs.fromBundle(requireArguments()).playerName
-        binding.txtTurn.text = name + "'s turn"
+        binding.txtTurn.text = "Player " + name + "'s turn"
+
 
         binding.btnBack.setOnClickListener {
             val action = GameFragmentDirections.actionMainFragment()
